@@ -69,23 +69,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'youtube_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'youtube_clone_database',
-        'USER': 'root',
-        'PASSWORD': 'bitSWAMP1054!@',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS': {
-            'autocommit': True
-        }
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
