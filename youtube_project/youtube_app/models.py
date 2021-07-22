@@ -1,5 +1,4 @@
 from django.db import models
-from youtube_project import youtube_app
 
 
 # Create your models here.
