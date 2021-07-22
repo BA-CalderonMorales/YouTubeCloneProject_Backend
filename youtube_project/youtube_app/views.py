@@ -14,7 +14,7 @@ class CommentList(APIView):
     This CommentList class is used to allow a front-end users to easily identify and manipulate a list of comments in
     my current MySQL database.
     """
-    def get_All(self, request):
+    def get(self, request):
         """
         Get all the comments in the current list of comments.
         :param request: Comes from the client.
@@ -75,7 +75,7 @@ class CommentDetail(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def update_likes(self, request, pk):
+    def patch(self, request, pk):
         """
         Can be used to isolate any specific attribute inside of comment. In this case, it's being
         used to isolate the number of likes inside of the current comment model being viewed.

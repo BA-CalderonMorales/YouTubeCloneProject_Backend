@@ -1,4 +1,5 @@
 from django.db import models
+from youtube_project import youtube_app
 
 
 # Create your models here.
@@ -7,3 +8,6 @@ class Comment(models.Model):
     userComment = models.CharField(max_length=500)
     like = models.IntegerField(default=0)
     dislike = models.IntegerField(default=0)
+    originalComment = models.ForeignKey('youtube_app.Comment', on_delete=models.CASCADE, null=True)
+
+
